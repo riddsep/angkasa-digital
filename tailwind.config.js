@@ -11,7 +11,7 @@ export default {
         clamp: [
           "clamp(1.2rem, 0.651rem + 3.72vw, 4rem)",
           {
-            lineHeight: "1.3",
+            lineHeight: "1.1",
           },
         ],
         "clamp-2": [

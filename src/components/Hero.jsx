@@ -20,7 +20,7 @@ const Hero = () => {
           <Button variant={"secondary"}>Siapa kami?</Button>
         </div>
       </div>
-      <div className="w-[90%] mx-auto mt-20 hidden lg:block">
+      <div className="w-[90%] mx-auto mt-24 hidden lg:block">
         <h3 className="font-source text-clamp-2 mb-2">Buat Website Impianmu</h3>
         <h1 className="font-source-600 text-clamp w-[60%] mb-8">
           Percepat Pertumbuhan Bisnis Anda dengan Website professional
