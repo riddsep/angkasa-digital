@@ -21,7 +21,7 @@ export default {
           },
         ],
         "clamp-3": [
-          "clamp(1rem, 0.6604651162790698rem + 1.4883720930232558vw, 2rem)",
+          "clamp(1.2rem, 0.6604651162790698rem + 1.4883720930232558vw, 2rem)",
           {
             lineHeight: "1.1",
           },
