@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Hero = () => {
   return (
-    <main className="font-sans lg:bg-hero-large lg:bg-cover bg-no-repeat w-full min-h-screen bg-top">
+    <main className="font-sans lg:bg-hero-large lg:bg-cover bg-no-repeat w-full lg:min-h-screen bg-top">
       <Navbar />
       <div className="px-5 relative lg:hidden">
         <picture>
