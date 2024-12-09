@@ -38,7 +38,7 @@ const CardList = () => {
           >
             <img src={feature.icon} width={50} />
             <h3 className="font-bold md:text-lg">{feature.title}</h3>
-            <p>{feature.desc}</p>
+            <p className="font-normal">{feature.desc}</p>
           </div>
         ))}
       </div>
