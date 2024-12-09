@@ -20,6 +20,12 @@ export default {
             lineHeight: "1.3",
           },
         ],
+        "clamp-3": [
+          "clamp(1.2rem, 0.6604651162790698rem + 1.4883720930232558vw, 2rem)",
+          {
+            lineHeight: "1.1",
+          },
+        ],
       },
       fontFamily: {
         source: ['"Source Serif 400"', "serif"],
