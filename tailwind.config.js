@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "hero-small": "url('/hero-small.svg')",
-        "hero-large": "url('/hero-large.svg')",
+        "hero-large": "url('/hero-large.jpg')",
       },
       fontSize: {
         clamp: [
