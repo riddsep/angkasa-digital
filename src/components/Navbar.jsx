@@ -32,7 +32,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="shadow ">
+    <div className="shadow text-black lg:text-white">
       <nav className="w-full lg:w-[90%] mx-auto flex items-center justify-between py-6 px-5  overflow-hidden">
         <div>
           <img src="/logo.svg" alt="Angkasa Digital" className="lg:w-40" />
@@ -63,7 +63,7 @@ const Navbar = () => {
 const NavItem = ({ children, href }) => {
   return (
     <li
-      className={`px-4 py-2 hover:text-[#F27121] mb-1 transition-all rounded-2xl text-white  ${
+      className={`px-4 py-2 hover:text-[#F27121] mb-1 transition-all rounded-2xl   ${
         children === "Konsultasi gratis"
           ? "bg-[#F27121] text-white hover:text-white hover:bg-[#D85E12] px-4 py-2 rounded-2xl"
           : ""
