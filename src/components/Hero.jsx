@@ -8,7 +8,12 @@ const Hero = () => {
       <div className="px-5 relative lg:hidden">
         <picture>
           <source srcSet="/hero-medium.png" media="(min-width: 640px)" />
-          <img src="/hero-small.svg" className="w-full" />
+          <img
+            src="/hero-small.svg"
+            className="w-full"
+            width={400}
+            height={400}
+          />
         </picture>
         <div className="absolute top-0 left-0 right-0 w-[80%] mx-auto translate-y-1/2 ">
           <h3 className="font-source text-clamp-2">Buat Website Impianmu</h3>
