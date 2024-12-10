@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "hero-small": "url('/hero-small.svg')",
-        "hero-large": "url('/hero-large.jpg')",
+        "hero-large": "url('/hero-large.svg')",
       },
       fontSize: {
         clamp: [
@@ -28,11 +28,11 @@ export default {
         ],
       },
       fontFamily: {
-        source: ['"Source Serif 400"', "serif"],
-        "source-300": ['"Source Serif 300"', "serif"],
-        "source-500": ['"Source Serif 500"', "serif"],
-        "source-600": ['"Source Serif 600"', "serif"],
-        "source-700": ['"Source Serif 700"', "serif"],
+        poppins: ["Poppins", "sans-serif"],
+        "poppins-300": ["Poppins-300", "sans-serif"],
+        "poppins-500": ["Poppins-500", "sans-serif"],
+        "poppins-600": ["Poppins-600", "sans-serif"],
+        "poppins-700": ["Poppins-700", "sans-serif"],
       },
     },
   },
