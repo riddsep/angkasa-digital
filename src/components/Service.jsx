@@ -3,7 +3,7 @@ const Service = () => {
     <section className="px-5 font-medium lg:w-[90%] mx-auto my-16 lg:my-[120px]">
       <h1 className="text-clamp-3 mb-10">Layanan Kami</h1>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-0">
-        <div className="bg-[#F27121] p-5 rounded flex justify-center items-center h-full">
+        <div className="bg-[#F27121] px-5 lg:py-10 rounded-br-full  flex justify-center items-center h-full ">
           <img
             src="/service-1.svg"
             className="h-80 lg:h-96"
@@ -39,7 +39,7 @@ const Service = () => {
             operasional UMKM dan koperasi Anda.
           </p>
         </div>
-        <div className="bg-[#F27121] p-5 rounded flex justify-center items-center h-full">
+        <div className="bg-[#F27121] px-5 py-5 lg:py-10 rounded-tl-full flex justify-center items-center h-full ">
           <img
             src="/service-2.svg"
             className="h-80 lg:h-96"
