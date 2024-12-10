@@ -1,9 +1,9 @@
 const Service = () => {
   return (
-    <section className="px-5 font-medium lg:w-[90%] mx-auto my-16 lg:my-[120px]">
-      <h1 className="text-clamp-3 mb-10">Layanan Kami</h1>
+    <section className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px]">
+      <h1 className="text-clamp-3 mb-10 font-poppins-500">Layanan Kami</h1>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-0">
-        <div className="bg-[#F27121] px-5 lg:py-10 rounded-br-full  flex justify-center items-center h-full ">
+        <div className="bg-[#F27121] px-5 lg:py-10 rounded-br-full flex justify-center items-center h-full ">
           <img
             src="/service-1.svg"
             className="h-80 lg:h-96"
@@ -17,7 +17,7 @@ const Service = () => {
           <h3 className="font-semibold text-[#F27121] lg:text-xl mb-4">
             Tingkatkan Bisnis Anda dengan Website Profesional
           </h3>
-          <p className="font-normal lg:text-xl">
+          <p className="lg:text-xl">
             Kami menyediakan layanan pembuatan website modern yang dirancang
             khusus untuk UMKM dan koperasi. Website Anda akan tampil menarik
             dengan desain responsif, fitur lengkap, dan optimasi SEO, membantu
