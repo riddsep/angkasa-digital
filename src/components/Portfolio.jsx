@@ -13,7 +13,7 @@ const Portfolio = () => {
         </p>
       </div>
       <div>
-        <img src="/portfolio.svg" />
+        <img src="/portfolio.svg" className="w-full" />
       </div>
     </section>
   );

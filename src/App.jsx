@@ -2,6 +2,7 @@ import CardList from "./components/CardList";
 import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
 import Service from "./components/Service";
+import Testimonial from "./components/Testimonial";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <CardList />
       <Service />
       <Portfolio />
+      <Testimonial />
     </>
   );
 }
