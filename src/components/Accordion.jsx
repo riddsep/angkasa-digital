@@ -41,7 +41,7 @@ function Accordion() {
     setSelectIdx((cur) => (cur === id ? null : id));
   }
   return (
-    <div className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px] grid md:grid-cols-[400px,1fr]">
+    <div className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px] grid md:grid-cols-[200px,1fr] lg:grid-cols-[400px,1fr]">
       <h1 className="text-clamp-3 mb-10 font-semibold">FAQ</h1>
       <div>
         {items.map((item, index) => (
