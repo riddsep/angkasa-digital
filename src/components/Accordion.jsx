@@ -47,7 +47,7 @@ function Accordion() {
         {items.map((item, index) => (
           <div
             key={index}
-            className="mb-5 border-b pb-4"
+            className="mb-5 border-b pb-4 cursor-pointer"
             onClick={() => handleExpanded(index)}
           >
             <div className="font-semibold flex justify-between items-center ">

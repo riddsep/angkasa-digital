@@ -28,12 +28,16 @@ const navlist = [
     href: "#",
   },
 ];
-const Navbar = () => {
+const Navbar = ({ isSticky }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="shadow text-black lg:text-white">
-      <nav className="w-full lg:w-[90%] mx-auto flex items-center justify-between py-6 px-5  overflow-hidden">
+    <div
+      className={`shadow text-black lg:text-white ${
+        isSticky ? "lg:fixed top-0 left-0 right-0 bg-white z-20" : ""
+      }`}
+    >
+      <nav className="w-full lg:w-[90%] mx-auto flex items-center justify-between py-6 px-5 overflow-hidden">
         <div>
           <img src="/logo.svg" alt="Angkasa Digital" className="lg:w-40" />
         </div>
@@ -43,7 +47,7 @@ const Navbar = () => {
           ${isOpen ? "translate-x-0" : "-translate-x-[1000px]"}`}
         >
           {navlist.map((list) => (
-            <NavItem key={list.id} href={list.href}>
+            <NavItem key={list.id} href={list.href} isSticky={isSticky}>
               {list.title}
             </NavItem>
           ))}
@@ -60,16 +64,16 @@ const Navbar = () => {
   );
 };
 
-const NavItem = ({ children, href }) => {
+const NavItem = ({ children, href, isSticky }) => {
   return (
     <li
       className={`px-4 py-2 hover:text-[#F27121] mb-1 transition-all rounded-2xl   ${
         children === "Konsultasi gratis"
           ? "bg-[#F27121] text-white hover:text-white hover:bg-[#D85E12] px-4 py-2 rounded-2xl"
           : ""
-      } ${children === "Home" ? "ml-auto" : ""} ${
+      } ${children === "Beranda" ? "ml-auto" : ""} ${
         children === "Kontak" ? "mr-auto" : ""
-      }`}
+      } ${isSticky ? "lg:text-black" : ""}`}
     >
       <a href={href}>{children}</a>
     </li>
