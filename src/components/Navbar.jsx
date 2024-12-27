@@ -4,7 +4,7 @@ import { useState } from "react";
 const navlist = [
   {
     id: 1,
-    title: "Home",
+    title: "Beranda",
     href: "#",
   },
   {
