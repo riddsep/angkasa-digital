@@ -66,22 +66,23 @@ export function TestimonialItem() {
           {testimonials.map((testi) => (
             <div
               key={testi.id}
-              className="embla__slide flex-grow-0 flex-shrink-0 lg:basis-[25%] md:basis-1/2 basis-full shadow-md flex flex-col select-none cursor-pointer"
+              className="embla__slide flex-grow-0 flex-shrink-0 lg:basis-[25%] md:basis-1/2 basis-full shadow-md flex flex-col select-none cursor-pointer border rounded-lg"
             >
-              <div className="p-4 text-center text-white bg-[#F27121] rounded-t-lg relative">
+              <div className="p-4 text-center  relative">
                 <h2 className="text-base font-semibold">{testi.company}</h2>
                 <div className="text-6xl text-black/50 absolute right-2 ">
                   &#x275E;
                 </div>
               </div>
-              <div className="p-4 flex flex-col flex-1 pt-5 bg-[#F27121]/10">
+              <div className="px-10 py-5 flex flex-col flex-1 pt-5 ">
                 <p className="flex-1">{testi.testimonial}</p>
 
                 <div className="flex items-center gap-2">
                   <img src={testi.image} className="w-14 h-14 rounded-full" />
-                  <div>
+                  <div className="flex flex-col">
                     <p className="font-semibold">{testi.name}</p>
                     <small className="text-gray-600">{testi.position}</small>
+                    <small>{testi.company}</small>
                   </div>
                 </div>
               </div>
