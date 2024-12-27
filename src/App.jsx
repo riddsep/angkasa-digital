@@ -1,3 +1,4 @@
+import Accordion from "./components/Accordion";
 import CardList from "./components/CardList";
 import Hero from "./components/Hero";
 import Konsultasi from "./components/Konsultasi";
@@ -14,6 +15,7 @@ function App() {
       <Portfolio />
       <Testimonial />
       <Konsultasi />
+      <Accordion />
     </>
   );
 }
