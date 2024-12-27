@@ -4,9 +4,9 @@ function Konsultasi() {
   return (
     <div className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px]">
       <h1 className="text-clamp-3 mb-10 font-semibold">
-        Konsultasikan bisnis kamu sekarang
+        Konsultasikan bisnis anda sekarang
       </h1>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-10">
         <div className="flex flex-col gap-10">
           <p>
             Kami siap membantu Anda menciptakan website atau aplikasi yang
