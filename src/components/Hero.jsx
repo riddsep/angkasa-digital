@@ -1,10 +1,29 @@
+import { useInView } from "react-intersection-observer";
 import Button from "./Button";
 import Navbar from "./Navbar";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  const { ref: heroRef, inView } = useInView({
+    root: null, // Mengamati viewport browser
+    threshold: 0, // Trigger ketika hero section keluar sebagian besar
+    rootMargin: "0px", // Offset margin sesuai tinggi navbar
+  });
+
+  // Gunakan useEffect untuk update state
+  useEffect(() => {
+    setIsSticky(!inView);
+  }, [inView]);
   return (
-    <main className="lg:bg-hero-large lg:bg-cover bg-no-repeat w-full lg:min-h-screen bg-top">
-      <Navbar />
+    <main
+      ref={heroRef}
+      className={`relative ${
+        isSticky ? "lg:pt-[90px]" : ""
+      } lg:bg-hero-large lg:bg-cover bg-no-repeat w-full lg:min-h-screen bg-top`}
+    >
+      <Navbar isSticky={isSticky} />
       <div className="px-5 relative lg:hidden">
         <picture>
           <source srcSet="/hero-medium.png" media="(min-width: 640px)" />
