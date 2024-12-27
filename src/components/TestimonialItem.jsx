@@ -66,7 +66,7 @@ export function TestimonialItem() {
           {testimonials.map((testi) => (
             <div
               key={testi.id}
-              className="embla__slide flex-grow-0 flex-shrink-0 lg:basis-[25%] md:basis-1/2 basis-full shadow-md flex flex-col select-none cursor-pointer border rounded-lg"
+              className="embla__slide flex-grow-0 flex-shrink-0 lg:basis-[25%] md:basis-1/2 basis-full shadow-md flex flex-col select-none cursor-pointer  rounded-lg"
             >
               <div className="p-4 text-center ">
                 <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#F27121] relative inline-block">
