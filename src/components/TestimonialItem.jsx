@@ -70,7 +70,9 @@ export function TestimonialItem() {
             >
               <div className="p-4 text-center ">
                 <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#F27121] relative inline-block">
-                  <span className="relative text-white">{testi.company}</span>
+                  <span className="relative text-white font-bold">
+                    {testi.company}
+                  </span>
                 </span>
               </div>
               <div className="px-8 py-5 flex flex-col flex-1 pt-5 ">
