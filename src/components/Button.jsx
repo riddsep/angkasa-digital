@@ -1,8 +1,12 @@
-const Button = ({ children, onClick, variant, width }) => {
+const Button = ({ children, onClick, variant, width, href }) => {
   const styles = {
     primary: "bg-[#F27121] text-white border-0 hover:bg-[#D85E12]",
     secondary: "bg-white border-0 hover:bg-[#eeeeee]",
   };
+
+  if (href) {
+    return <a href={href}>{children}</a>;
+  }
 
   return (
     <button

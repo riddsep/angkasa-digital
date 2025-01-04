@@ -28,13 +28,13 @@ const navlist = [
     href: "#",
   },
 ];
-const Navbar = ({ isSticky }) => {
+const Navbar = ({ isSticky, scrollToSection }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div
       className={`shadow text-black lg:text-white ${
-        isSticky ? "lg:fixed top-0 left-0 right-0 bg-white z-20" : ""
+        isSticky ? "fixed top-0 left-0 right-0 bg-white z-20" : ""
       }`}
     >
       <nav className="w-full lg:w-[90%] mx-auto flex items-center justify-between py-6 px-5 overflow-hidden">
@@ -47,7 +47,12 @@ const Navbar = ({ isSticky }) => {
           ${isOpen ? "translate-x-0" : "-translate-x-[1000px]"}`}
         >
           {navlist.map((list) => (
-            <NavItem key={list.id} href={list.href} isSticky={isSticky}>
+            <NavItem
+              key={list.id}
+              href={list.href}
+              isSticky={isSticky}
+              scrollToSection={scrollToSection}
+            >
               {list.title}
             </NavItem>
           ))}
@@ -64,7 +69,13 @@ const Navbar = ({ isSticky }) => {
   );
 };
 
-const NavItem = ({ children, href, isSticky }) => {
+const NavItem = ({ children, isSticky, scrollToSection }) => {
+  const scrollTo = {
+    beranda: () => scrollToSection("home"),
+    layanan: () => scrollToSection("service"),
+    portofolio: () => scrollToSection("portfolio"),
+    contact: () => scrollToSection("contact"),
+  };
   return (
     <li
       className={`px-4 py-2 hover:text-[#F27121] mb-1 transition-all rounded-2xl   ${
@@ -77,7 +88,13 @@ const NavItem = ({ children, href, isSticky }) => {
         children === "Kontak" ? "mr-auto" : ""
       } ${isSticky ? "lg:text-black" : ""}`}
     >
-      <a href={href}>{children}</a>
+      <button
+        onClick={
+          scrollTo[children === "Kontak" ? "contact" : children.toLowerCase()]
+        }
+      >
+        {children}
+      </button>
     </li>
   );
 };

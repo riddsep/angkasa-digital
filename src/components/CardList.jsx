@@ -26,9 +26,12 @@ const features = [
   },
 ];
 
-const CardList = () => {
+const CardList = ({ featuresRef }) => {
   return (
-    <section className="font-poppins-500 px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px]">
+    <section
+      className="font-poppins-500 px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px]"
+      ref={featuresRef}
+    >
       <h1 className="text-clamp-3 mb-10">Kenapa harus memilih kami</h1>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 ">
         {features.map((feature) => (
