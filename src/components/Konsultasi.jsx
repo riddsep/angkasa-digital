@@ -1,8 +1,11 @@
 import Button from "./Button";
 
-function Konsultasi() {
+function Konsultasi({ contactRef }) {
   return (
-    <div className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px]">
+    <div
+      className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px]"
+      ref={contactRef}
+    >
       <h1 className="text-clamp-3 mb-10 font-semibold">
         Konsultasikan bisnis anda sekarang
       </h1>

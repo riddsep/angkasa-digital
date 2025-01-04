@@ -3,7 +3,7 @@ import Button from "./Button";
 import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
 
-const Hero = () => {
+const Hero = ({ scrollToSection, berandaRef }) => {
   const [isSticky, setIsSticky] = useState(false);
 
   const { ref: heroRef, inView } = useInView({
@@ -18,12 +18,15 @@ const Hero = () => {
   }, [inView]);
   return (
     <main
-      ref={heroRef}
+      ref={(el) => {
+        heroRef(el);
+        berandaRef.current = el;
+      }}
       className={`relative ${
         isSticky ? "lg:pt-[90px]" : ""
       } lg:bg-hero-large lg:bg-cover bg-no-repeat w-full lg:min-h-screen bg-top`}
     >
-      <Navbar isSticky={isSticky} />
+      <Navbar isSticky={isSticky} scrollToSection={scrollToSection} />
       <div className="px-5 relative lg:hidden">
         <picture>
           <source srcSet="/hero-medium.png" media="(min-width: 640px)" />
@@ -41,7 +44,12 @@ const Hero = () => {
           </h1>
           <Button variant={"primary"}>Konsultasi gratis</Button>
           <span className="mr-2"></span>
-          <Button variant={"secondary"}>Siapa kami?</Button>
+          <Button
+            variant={"secondary"}
+            onClick={() => scrollToSection("features")}
+          >
+            Kenapa kami?
+          </Button>
         </div>
       </div>
       <div className="w-[90%] mx-auto text-center mt-32 hidden lg:block">
@@ -53,7 +61,12 @@ const Hero = () => {
         </h1>
         <Button variant={"primary"}>Konsultasi gratis</Button>
         <span className="mr-3"></span>
-        <Button variant={"secondary"}>Siapa kami?</Button>
+        <Button
+          variant={"secondary"}
+          onClick={() => scrollToSection("features")}
+        >
+          Kenapa kami?
+        </Button>
       </div>
     </main>
   );

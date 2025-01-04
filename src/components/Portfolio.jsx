@@ -1,6 +1,9 @@
-const Portfolio = () => {
+const Portfolio = ({ portfolioRef }) => {
   return (
-    <section className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px] grid grid-cols-1 md:grid-cols-2 gap-10">
+    <section
+      className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px] grid grid-cols-1 md:grid-cols-2 gap-10"
+      ref={portfolioRef}
+    >
       <div>
         <h1 className="text-clamp-3 mb-10 font-semibold">Portfolio Kami</h1>
         <h3 className="font-poppins-600 text-[#F27121] lg:text-xl mb-2">

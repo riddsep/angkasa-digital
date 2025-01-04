@@ -1,6 +1,9 @@
-const Service = () => {
+const Service = ({ serviceRef }) => {
   return (
-    <section className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px]">
+    <section
+      className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px]"
+      ref={serviceRef}
+    >
       <h1 className="text-clamp-3 mb-10 font-poppins-500">Layanan Kami</h1>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-0">
         <div className="bg-[#F27121] px-5 lg:py-10 rounded-br-full flex justify-center items-center h-full ">
