@@ -69,7 +69,9 @@ const NavItem = ({ children, href, isSticky }) => {
     <li
       className={`px-4 py-2 hover:text-[#F27121] mb-1 transition-all rounded-2xl   ${
         children === "Konsultasi gratis"
-          ? "bg-[#F27121] text-white hover:text-white hover:bg-[#D85E12] px-4 py-2 rounded-2xl"
+          ? `bg-[#F27121] text-white hover:text-white hover:bg-[#D85E12] px-4 py-2 rounded-2xl ${
+              isSticky ? "lg:text-white" : ""
+            }`
           : ""
       } ${children === "Beranda" ? "ml-auto" : ""} ${
         children === "Kontak" ? "mr-auto" : ""

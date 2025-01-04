@@ -41,7 +41,7 @@ const Hero = () => {
           </h1>
           <Button variant={"primary"}>Konsultasi gratis</Button>
           <span className="mr-2"></span>
-          <Button variant={"secondary"}>Siapa kami?</Button>
+          <Button variant={"secondary"}>Kenapa kami?</Button>
         </div>
       </div>
       <div className="w-[90%] mx-auto text-center mt-32 hidden lg:block">
@@ -53,7 +53,7 @@ const Hero = () => {
         </h1>
         <Button variant={"primary"}>Konsultasi gratis</Button>
         <span className="mr-3"></span>
-        <Button variant={"secondary"}>Siapa kami?</Button>
+        <Button variant={"secondary"}>Kenapa kami?</Button>
       </div>
     </main>
   );
