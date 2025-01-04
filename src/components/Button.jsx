@@ -10,7 +10,7 @@ const Button = ({ children, onClick, variant, width, href }) => {
 
   return (
     <button
-      className={`px-4 py-2 rounded-2xl transition-all text-xs sm:text-base ${styles[variant]} ${width}`}
+      className={`rounded-2xl px-4 py-2 text-xs transition-all sm:text-base ${styles[variant]} ${width}`}
       onClick={onClick}
     >
       {children}

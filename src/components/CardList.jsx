@@ -29,15 +29,15 @@ const features = [
 const CardList = ({ featuresRef }) => {
   return (
     <section
-      className="font-poppins-500 px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px]"
+      className="mx-auto my-16 px-5 font-poppins-500 lg:my-[120px] lg:w-[90%]"
       ref={featuresRef}
     >
-      <h1 className="text-clamp-3 mb-10">Kenapa harus memilih kami</h1>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 ">
+      <h1 className="mb-10 text-clamp-3">Kenapa harus memilih kami</h1>
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="p-6 bg-[#eeeeee] rounded-lg grid grid-cols-1 gap-2"
+            className="grid grid-cols-1 gap-2 rounded-lg bg-[#eeeeee] p-6"
           >
             <img src={feature.icon} width={50} />
             <h3 className="font-bold md:text-lg">{feature.title}</h3>

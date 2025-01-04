@@ -3,13 +3,13 @@ import Button from "./Button";
 function Konsultasi({ contactRef }) {
   return (
     <div
-      className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px]"
+      className="mx-auto my-16 px-5 lg:my-[120px] lg:w-[90%]"
       ref={contactRef}
     >
-      <h1 className="text-clamp-3 mb-10 font-semibold">
+      <h1 className="mb-10 text-clamp-3 font-semibold">
         Konsultasikan bisnis anda sekarang
       </h1>
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid gap-10 md:grid-cols-2">
         <div className="flex flex-col gap-10">
           <p>
             Kami siap membantu Anda menciptakan website atau aplikasi yang
@@ -18,14 +18,14 @@ function Konsultasi({ contactRef }) {
           </p>
 
           <div className="flex flex-col gap-5">
-            <div className="flex items-center gap-2 bg-[#eeeeee] w-80 rounded-xl py-2 px-5 text-[#F27121]">
+            <div className="flex w-80 items-center gap-2 rounded-xl bg-[#eeeeee] px-5 py-2 text-[#F27121]">
               <img src="/mail.svg" alt="" />
               abcdefg@gmail.com
             </div>
-            <div className="flex items-center gap-2 bg-[#eeeeee] w-80 rounded-xl py-2 px-5 text-[#F27121]">
+            <div className="flex w-80 items-center gap-2 rounded-xl bg-[#eeeeee] px-5 py-2 text-[#F27121]">
               <img src="/instagram.svg" alt="" /> @angkasadigital
             </div>
-            <div className="flex items-center gap-2 bg-[#eeeeee] w-80 rounded-xl py-2 px-5 text-[#F27121]">
+            <div className="flex w-80 items-center gap-2 rounded-xl bg-[#eeeeee] px-5 py-2 text-[#F27121]">
               <img src="/map-pin.svg" alt="" /> Jl. Km 16 Dago, Kota Bandung
             </div>
           </div>
@@ -37,16 +37,16 @@ function Konsultasi({ contactRef }) {
               id="nama"
               type="text"
               placeholder="Tulis nama anda"
-              className="block w-full p-2 rounded-lg border mb-4"
+              className="mb-4 block w-full rounded-lg border p-2"
             />
-            <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="mb-4 grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="email">Email</label>
                 <input
                   id="email"
                   type="text"
                   placeholder="abcdefg@gmail.com"
-                  className="block w-full p-2 rounded-lg border "
+                  className="block w-full rounded-lg border p-2"
                 />
               </div>
               <div>
@@ -55,7 +55,7 @@ function Konsultasi({ contactRef }) {
                   id="notel"
                   type="text"
                   placeholder="085687652345"
-                  className="block w-full p-2 rounded-lg border "
+                  className="block w-full rounded-lg border p-2"
                 />
               </div>
               <div>
@@ -64,7 +64,7 @@ function Konsultasi({ contactRef }) {
                   id="lokasi"
                   type="text"
                   placeholder="Jakarta"
-                  className="block w-full p-2 rounded-lg border "
+                  className="block w-full rounded-lg border p-2"
                 />
               </div>
               <div>
@@ -72,7 +72,7 @@ function Konsultasi({ contactRef }) {
                 <select
                   name="budget"
                   id="budget"
-                  className="block w-full p-2 rounded-lg border "
+                  className="block w-full rounded-lg border p-2"
                 >
                   <option value="1">Rp. 1.000.000 - Rp. 2.000.000</option>
                   <option value="2">Rp. 2.000.000 - Rp. 3.000.000</option>
@@ -87,7 +87,7 @@ function Konsultasi({ contactRef }) {
               name="pesan"
               id="pesan"
               placeholder="Tulis apa yang ingin kamu tanyakan ....."
-              className="block w-full p-2 rounded-lg border mb-4"
+              className="mb-4 block w-full rounded-lg border p-2"
               rows={5}
             ></textarea>
             <Button variant="primary" width="w-full">
