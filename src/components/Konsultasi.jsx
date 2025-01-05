@@ -1,6 +1,29 @@
+import { useState } from "react";
 import Button from "./Button";
 
 function Konsultasi({ contactRef }) {
+  const [formData, setFormData] = useState({
+    nama: "",
+    email: "",
+    notel: "",
+    lokasi: "",
+    estimasiBudget: "1",
+    pesan: "",
+  });
+
+  function handleChange(e) {
+    const newData = {
+      ...formData,
+      [e.target.name]: e.target.value,
+    };
+    setFormData(newData);
+    e.target.setCustomValidity("");
+  }
+
+  function handleAddUserData(e) {
+    e.preventDefault();
+  }
+
   return (
     <div
       ref={contactRef}
@@ -31,12 +54,19 @@ function Konsultasi({ contactRef }) {
           </div>
         </div>
         <div>
-          <form action="">
+          <form onSubmit={handleAddUserData}>
             <label htmlFor="nama">Nama</label>
             <input
               id="nama"
               type="text"
-              placeholder="Tulis nama anda"
+              name="nama"
+              value={formData.nama}
+              onChange={handleChange}
+              onInvalid={(e) =>
+                e.target.setCustomValidity("Silakan isi nama Anda!")
+              }
+              required
+              placeholder="Monkey D Luffy"
               className="mb-4 block w-full rounded-lg border p-2"
             />
             <div className="mb-4 grid grid-cols-2 gap-4">
@@ -44,8 +74,15 @@ function Konsultasi({ contactRef }) {
                 <label htmlFor="email">Email</label>
                 <input
                   id="email"
-                  type="text"
-                  placeholder="abcdefg@gmail.com"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  onInvalid={(e) =>
+                    e.target.setCustomValidity("Masukkan email yang valid!")
+                  }
+                  required
+                  placeholder="monkeydluffy@gmail.com"
                   className="block w-full rounded-lg border p-2"
                 />
               </div>
@@ -53,7 +90,16 @@ function Konsultasi({ contactRef }) {
                 <label htmlFor="notel">No Telepon</label>
                 <input
                   id="notel"
-                  type="text"
+                  name="notel"
+                  type="number"
+                  value={formData.notel}
+                  onChange={handleChange}
+                  onInvalid={(e) =>
+                    e.target.setCustomValidity(
+                      "Nomor telepon tidak boleh kosong!",
+                    )
+                  }
+                  required
                   placeholder="085687652345"
                   className="block w-full rounded-lg border p-2"
                 />
@@ -63,6 +109,13 @@ function Konsultasi({ contactRef }) {
                 <input
                   id="lokasi"
                   type="text"
+                  name="lokasi"
+                  value={formData.lokasi}
+                  onChange={handleChange}
+                  onInvalid={(e) =>
+                    e.target.setCustomValidity("Lokasi wajib diisi!")
+                  }
+                  required
                   placeholder="Jakarta"
                   className="block w-full rounded-lg border p-2"
                 />
@@ -70,8 +123,11 @@ function Konsultasi({ contactRef }) {
               <div>
                 <label htmlFor="budget">Estimasi Budget</label>
                 <select
-                  name="budget"
+                  name="estimasiBudget"
                   id="budget"
+                  value={formData.estimasiBudget}
+                  onChange={handleChange}
+                  required
                   className="block w-full rounded-lg border p-2"
                 >
                   <option value="1">Rp. 1.000.000 - Rp. 2.000.000</option>
@@ -86,6 +142,12 @@ function Konsultasi({ contactRef }) {
             <textarea
               name="pesan"
               id="pesan"
+              value={formData.pesan}
+              onChange={handleChange}
+              onInvalid={(e) =>
+                e.target.setCustomValidity("Pesan tidak boleh kosong!")
+              }
+              required
               placeholder="Tulis apa yang ingin kamu tanyakan ....."
               className="mb-4 block w-full rounded-lg border p-2"
               rows={5}

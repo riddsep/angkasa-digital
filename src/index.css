@@ -50,3 +50,14 @@
     font-family: "Poppins", "sans-serif";
   }
 }
+@layer utilities {
+  /* Menghilangkan spinner di input number */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    @apply appearance-none;
+  }
+
+  input[type="number"] {
+    @apply appearance-none;
+  }
+}
