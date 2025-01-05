@@ -42,7 +42,10 @@ const Hero = ({ scrollToSection, berandaRef }) => {
           <h1 className="mb-5 font-poppins-600 text-clamp">
             Percepat Pertumbuhan Bisnis Anda dengan Website professional!
           </h1>
-          <Button variant={"primary"} href={"https://wa.me/082286701235"}>
+          <Button
+            variant={"primary"}
+            onClick={() => scrollToSection("contact")}
+          >
             Konsultasi gratis
           </Button>
           <span className="mr-2"></span>
@@ -61,7 +64,7 @@ const Hero = ({ scrollToSection, berandaRef }) => {
         <h1 className="mx-auto mb-8 w-[70%] text-center font-poppins-600 text-clamp text-white">
           Percepat Pertumbuhan Bisnis Anda dengan Website professional
         </h1>
-        <Button variant={"primary"} href={"https://wa.me/082286701235"}>
+        <Button variant={"primary"} onClick={() => scrollToSection("contact")}>
           Konsultasi gratis
         </Button>
         <span className="mr-3"></span>
