@@ -34,14 +34,17 @@ const items = [
   },
 ];
 
-function Accordion() {
+function Accordion({ faqRef }) {
   const [selectIdx, setSelectIdx] = useState(null);
 
   function handleExpanded(id) {
     setSelectIdx((cur) => (cur === id ? null : id));
   }
   return (
-    <div className="mx-auto my-16 grid px-5 md:grid-cols-[200px,1fr] lg:my-[120px] lg:w-[90%] lg:grid-cols-[400px,1fr]">
+    <div
+      ref={faqRef}
+      className="mx-auto my-16 grid px-5 md:grid-cols-[200px,1fr] lg:my-[120px] lg:w-[90%] lg:grid-cols-[400px,1fr]"
+    >
       <h1 className="mb-10 text-clamp-3 font-semibold">FAQ</h1>
       <div>
         {items.map((item, index) => (

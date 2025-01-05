@@ -19,7 +19,7 @@ const navlist = [
   },
   {
     id: 4,
-    title: "Kontak",
+    title: "FAQ",
     href: "#",
   },
   {
@@ -73,7 +73,7 @@ const NavItem = ({ children, isSticky, scrollToSection }) => {
     beranda: () => scrollToSection("home"),
     layanan: () => scrollToSection("service"),
     portofolio: () => scrollToSection("portfolio"),
-    contact: () => scrollToSection("contact"),
+    faq: () => scrollToSection("faq"),
   };
   return (
     <li
@@ -84,16 +84,10 @@ const NavItem = ({ children, isSticky, scrollToSection }) => {
             }`
           : ""
       } ${children === "Beranda" ? "ml-auto" : ""} ${
-        children === "Kontak" ? "mr-auto" : ""
+        children === "FAQ" ? "mr-auto" : ""
       } ${isSticky ? "lg:text-black" : ""}`}
     >
-      <button
-        onClick={
-          scrollTo[children === "Kontak" ? "contact" : children.toLowerCase()]
-        }
-      >
-        {children}
-      </button>
+      <button onClick={scrollTo[children.toLowerCase()]}>{children}</button>
     </li>
   );
 };

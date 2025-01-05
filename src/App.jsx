@@ -13,7 +13,7 @@ function App() {
   const featuresRef = useRef(null);
   const serviceRef = useRef(null);
   const portfolioRef = useRef(null);
-  const contactRef = useRef(null);
+  const faqRef = useRef(null);
 
   const scrollToSection = (section) => {
     const sectionRefs = {
@@ -21,7 +21,7 @@ function App() {
       features: featuresRef,
       service: serviceRef,
       portfolio: portfolioRef,
-      contact: contactRef,
+      faq: faqRef,
     };
 
     if (sectionRefs[section] && sectionRefs[section].current) {
@@ -47,8 +47,8 @@ function App() {
       <Service serviceRef={serviceRef} />
       <Portfolio portfolioRef={portfolioRef} />
       <Testimonial />
-      <Konsultasi contactRef={contactRef} />
-      <Accordion />
+      <Konsultasi />
+      <Accordion faqRef={faqRef} />
       <Footer />
     </>
   );
