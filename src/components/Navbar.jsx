@@ -28,7 +28,6 @@ const navlist = [
     href: "https://wa.me/6282283272280", // Tambahkan link WhatsApp atau lainnya
   },
 ];
-
 const Navbar = ({ isSticky, scrollToSection }) => {
   const [isOpen, setIsOpen] = useState(false);
 

@@ -10,7 +10,12 @@ function Footer() {
         <div className="flex gap-2">
           <img src="instagram.svg" alt="" className="w-7 cursor-pointer" />
           <img src="map-pin.svg" alt="" className="w-7 cursor-pointer" />
-          <img src="mail.svg" alt="" className="w-7 cursor-pointer" />
+          <a
+            href="mailto:abcdefg@gmail.com?subject=Halo Angkasa Digital&body=Saya tertarik untuk berkonsultasi."
+            className="hover:underline"
+          >
+            <img src="mail.svg" alt="" className="w-7 cursor-pointer" />
+          </a>
         </div>
       </div>
     </div>
