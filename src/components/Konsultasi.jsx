@@ -27,7 +27,7 @@ function Konsultasi({ contactRef }) {
   return (
     <div
       ref={contactRef}
-      className="mx-auto my-16 overflow-hidden px-5 lg:my-[120px] lg:w-[90%]"
+      className="mx-auto my-16 w-full px-5 lg:my-[120px] lg:w-[90%]"
     >
       <h1 className="mb-10 text-clamp-3 font-semibold">
         Konsultasikan bisnis anda sekarang
