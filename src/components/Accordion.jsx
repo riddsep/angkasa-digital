@@ -40,6 +40,7 @@ function Accordion({ faqRef }) {
   function handleExpanded(id) {
     setSelectIdx((cur) => (cur === id ? null : id));
   }
+
   return (
     <div
       ref={faqRef}
@@ -48,12 +49,11 @@ function Accordion({ faqRef }) {
       <h1 className="mb-10 text-clamp-3 font-semibold">FAQ</h1>
       <div>
         {items.map((item, index) => (
-          <div
-            key={index}
-            className="mb-5 cursor-pointer border-b pb-4"
-            onClick={() => handleExpanded(index)}
-          >
-            <div className="flex items-center justify-between font-semibold">
+          <div key={index} className="mb-5 border-b pb-4">
+            <div
+              className="flex cursor-pointer items-center justify-between font-semibold"
+              onClick={() => handleExpanded(index)}
+            >
               <h2>{item.title}</h2>
               <img
                 src={
@@ -62,9 +62,13 @@ function Accordion({ faqRef }) {
                 alt="dropdown icon"
               />
             </div>
-            {index === selectIdx && (
-              <p className="max-w-[700px]">{item.content} </p>
-            )}
+            <div
+              className={`max-h-0 overflow-hidden transition-all duration-300 ease-in-out ${
+                index === selectIdx ? "mt-2 max-h-[500px]" : ""
+              }`}
+            >
+              <p className="max-w-[700px]">{item.content}</p>
+            </div>
           </div>
         ))}
       </div>
