@@ -49,7 +49,7 @@ function App() {
       <Service serviceRef={serviceRef} />
       <Portfolio portfolioRef={portfolioRef} />
       <Testimonial />
-      {/* <Konsultasi contactRef={contactRef} /> */}
+      <Konsultasi contactRef={contactRef} />
       <Accordion faqRef={faqRef} />
       <Footer />
     </>
