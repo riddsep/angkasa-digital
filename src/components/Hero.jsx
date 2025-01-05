@@ -24,10 +24,10 @@ const Hero = ({ scrollToSection, berandaRef }) => {
       }}
       className={`relative ${
         isSticky ? "lg:pt-[90px]" : ""
-      } lg:bg-hero-large lg:bg-cover bg-no-repeat w-full lg:min-h-screen bg-top`}
+      } w-full bg-top bg-no-repeat lg:min-h-screen lg:bg-hero-large lg:bg-cover`}
     >
       <Navbar isSticky={isSticky} scrollToSection={scrollToSection} />
-      <div className="px-5 relative lg:hidden">
+      <div className="relative px-5 lg:hidden">
         <picture>
           <source srcSet="/hero-medium.png" media="(min-width: 640px)" />
           <img
@@ -37,12 +37,14 @@ const Hero = ({ scrollToSection, berandaRef }) => {
             height={400}
           />
         </picture>
-        <div className="absolute top-0 left-0 right-0 w-[80%] mx-auto translate-y-1/2 ">
+        <div className="absolute left-0 right-0 top-0 mx-auto w-[80%] translate-y-1/2">
           <h3 className="text-clamp-2">Buat Website Impianmu</h3>
-          <h1 className="font-poppins-600 text-clamp mb-5">
+          <h1 className="mb-5 font-poppins-600 text-clamp">
             Percepat Pertumbuhan Bisnis Anda dengan Website professional!
           </h1>
-          <Button variant={"primary"}>Konsultasi gratis</Button>
+          <Button variant={"primary"} href={"https://wa.me/082286701235"}>
+            Konsultasi gratis
+          </Button>
           <span className="mr-2"></span>
           <Button
             variant={"secondary"}
@@ -52,14 +54,16 @@ const Hero = ({ scrollToSection, berandaRef }) => {
           </Button>
         </div>
       </div>
-      <div className="w-[90%] mx-auto text-center mt-32 hidden lg:block">
-        <h3 className="text-clamp-2 mb-2 text-[#F27121] font-semibold ">
+      <div className="mx-auto mt-32 hidden w-[90%] text-center lg:block">
+        <h3 className="mb-2 text-clamp-2 font-semibold text-[#F27121]">
           Buat Website Impianmu
         </h3>
-        <h1 className="font-poppins-600 text-clamp w-[70%] mx-auto mb-8 text-white text-center">
+        <h1 className="mx-auto mb-8 w-[70%] text-center font-poppins-600 text-clamp text-white">
           Percepat Pertumbuhan Bisnis Anda dengan Website professional
         </h1>
-        <Button variant={"primary"}>Konsultasi gratis</Button>
+        <Button variant={"primary"} href={"https://wa.me/082286701235"}>
+          Konsultasi gratis
+        </Button>
         <span className="mr-3"></span>
         <Button
           variant={"secondary"}

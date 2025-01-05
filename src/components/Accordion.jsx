@@ -34,23 +34,26 @@ const items = [
   },
 ];
 
-function Accordion() {
+function Accordion({ faqRef }) {
   const [selectIdx, setSelectIdx] = useState(null);
 
   function handleExpanded(id) {
     setSelectIdx((cur) => (cur === id ? null : id));
   }
   return (
-    <div className="px-5 lg:w-[90%] mx-auto my-16 lg:my-[120px] grid md:grid-cols-[200px,1fr] lg:grid-cols-[400px,1fr]">
-      <h1 className="text-clamp-3 mb-10 font-semibold">FAQ</h1>
+    <div
+      ref={faqRef}
+      className="mx-auto my-16 grid px-5 md:grid-cols-[200px,1fr] lg:my-[120px] lg:w-[90%] lg:grid-cols-[400px,1fr]"
+    >
+      <h1 className="mb-10 text-clamp-3 font-semibold">FAQ</h1>
       <div>
         {items.map((item, index) => (
           <div
             key={index}
-            className="mb-5 border-b pb-4 cursor-pointer"
+            className="mb-5 cursor-pointer border-b pb-4"
             onClick={() => handleExpanded(index)}
           >
-            <div className="font-semibold flex justify-between items-center ">
+            <div className="flex items-center justify-between font-semibold">
               <h2>{item.title}</h2>
               <img
                 src={

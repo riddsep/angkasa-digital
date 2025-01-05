@@ -19,7 +19,7 @@ const navlist = [
   },
   {
     id: 4,
-    title: "Kontak",
+    title: "FAQ",
     href: "#",
   },
   {
@@ -33,18 +33,17 @@ const Navbar = ({ isSticky, scrollToSection }) => {
 
   return (
     <div
-      className={`shadow text-black lg:text-white ${
-        isSticky ? "fixed top-0 left-0 right-0 bg-white z-20" : ""
+      className={`text-black shadow lg:text-white ${
+        isSticky ? "fixed left-0 right-0 top-0 z-20 bg-white" : ""
       }`}
     >
-      <nav className="w-full lg:w-[90%] mx-auto flex items-center justify-between py-6 px-5 overflow-hidden">
+      <nav className="mx-auto flex w-full items-center justify-between overflow-hidden px-5 py-6 lg:w-[90%]">
         <div>
           <img src="/logo.svg" alt="Angkasa Digital" className="lg:w-40" />
         </div>
 
         <ul
-          className={`absolute right-5 top-14 w-full z-10 bg-white max-w-72 px-5 py-8 lg:py-0 rounded shadow-xl transition-transform lg:flex lg:translate-x-0 lg:static lg:bg-transparent lg:max-w-full lg:shadow-none 
-          ${isOpen ? "translate-x-0" : "-translate-x-[1000px]"}`}
+          className={`absolute right-5 top-14 z-10 w-full max-w-72 rounded bg-white px-5 py-8 shadow-xl transition-transform lg:static lg:flex lg:max-w-full lg:translate-x-0 lg:bg-transparent lg:py-0 lg:shadow-none ${isOpen ? "translate-x-0" : "-translate-x-[1000px]"}`}
         >
           {navlist.map((list) => (
             <NavItem
@@ -61,7 +60,7 @@ const Navbar = ({ isSticky, scrollToSection }) => {
         <Menu
           color="#F27121"
           size={35}
-          className="lg:hidden cursor-pointer"
+          className="cursor-pointer lg:hidden"
           onClick={() => setIsOpen((is) => !is)}
         />
       </nav>
@@ -74,27 +73,21 @@ const NavItem = ({ children, isSticky, scrollToSection }) => {
     beranda: () => scrollToSection("home"),
     layanan: () => scrollToSection("service"),
     portofolio: () => scrollToSection("portfolio"),
-    contact: () => scrollToSection("contact"),
+    faq: () => scrollToSection("faq"),
   };
   return (
     <li
-      className={`px-4 py-2 hover:text-[#F27121] mb-1 transition-all rounded-2xl   ${
+      className={`mb-1 rounded-2xl px-4 py-2 transition-all hover:text-[#F27121] ${
         children === "Konsultasi gratis"
-          ? `bg-[#F27121] text-white hover:text-white hover:bg-[#D85E12] px-4 py-2 rounded-2xl ${
+          ? `rounded-2xl bg-[#F27121] px-4 py-2 text-white hover:bg-[#D85E12] hover:text-white ${
               isSticky ? "lg:text-white" : ""
             }`
           : ""
       } ${children === "Beranda" ? "ml-auto" : ""} ${
-        children === "Kontak" ? "mr-auto" : ""
+        children === "FAQ" ? "mr-auto" : ""
       } ${isSticky ? "lg:text-black" : ""}`}
     >
-      <button
-        onClick={
-          scrollTo[children === "Kontak" ? "contact" : children.toLowerCase()]
-        }
-      >
-        {children}
-      </button>
+      <button onClick={scrollTo[children.toLowerCase()]}>{children}</button>
     </li>
   );
 };

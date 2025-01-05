@@ -61,25 +61,25 @@ export function TestimonialItem() {
 
   return (
     <div className="relative">
-      <div className="embla  overflow-hidden" ref={emblaRef}>
-        <div className="embla__container flex gap-5 h-[400px]">
+      <div className="embla overflow-hidden" ref={emblaRef}>
+        <div className="embla__container flex h-[400px] gap-5">
           {testimonials.map((testi) => (
             <div
               key={testi.id}
-              className="embla__slide flex-grow-0 flex-shrink-0 lg:basis-[25%] md:basis-1/2 basis-full shadow-md flex flex-col select-none cursor-pointer border rounded-lg"
+              className="embla__slide flex flex-shrink-0 flex-grow-0 basis-full cursor-pointer select-none flex-col rounded-lg border shadow-md md:basis-1/2 lg:basis-[25%]"
             >
-              <div className="p-4 text-center ">
-                <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#F27121] relative inline-block">
-                  <span className="relative text-white font-bold">
+              <div className="p-4 text-center">
+                <span className="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-[#F27121]">
+                  <span className="relative font-bold text-white">
                     {testi.company}
                   </span>
                 </span>
               </div>
-              <div className="px-8 py-5 flex flex-col flex-1 pt-5 ">
+              <div className="flex flex-1 flex-col px-8 py-5 pt-5">
                 <p className="flex-1">“{testi.testimonial}”</p>
 
                 <div className="flex items-center gap-2">
-                  <img src={testi.image} className="w-14 h-14 rounded-full" />
+                  <img src={testi.image} className="h-14 w-14 rounded-full" />
                   <div className="flex flex-col">
                     <p className="font-semibold">{testi.name}</p>
                     <small className="text-gray-600">{testi.position}</small>
@@ -91,13 +91,13 @@ export function TestimonialItem() {
         </div>
       </div>
       <button
-        className="embla__prev text-4xl absolute top-1/2 -translate-y-1/2 -left-10  rounded-full w-10 h-10 lg:flex items-center justify-center hidden "
+        className="embla__prev absolute -left-10 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full text-4xl lg:flex"
         onClick={scrollPrev}
       >
         &#8249;
       </button>
       <button
-        className="embla__next text-4xl absolute top-1/2 -translate-y-1/2 -right-10  rounded-full w-10 h-10 lg:flex items-center justify-center hidden "
+        className="embla__next absolute -right-10 top-1/2 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full text-4xl lg:flex"
         onClick={scrollNext}
       >
         &#8250;
