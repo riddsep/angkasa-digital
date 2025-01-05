@@ -6,22 +6,7 @@ function Footer() {
           <img src="logo.svg" alt="" className="w-32" />
           <p>&copy;Angkasa Digital 2024. All Right reserved</p>
         </div>
-        <div>
-          <ul>
-            <li>
-              <a href="#">Beranda</a>
-            </li>
-            <li>
-              <a href="#">Layanan</a>
-            </li>
-            <li>
-              <a href="#">Portfolio</a>
-            </li>
-            <li>
-              <a href="#">Kontak</a>
-            </li>
-          </ul>
-        </div>
+
         <div className="flex gap-2">
           <img src="instagram.svg" alt="" className="w-7 cursor-pointer" />
           <img src="map-pin.svg" alt="" className="w-7 cursor-pointer" />
