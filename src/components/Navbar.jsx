@@ -25,7 +25,7 @@ const navlist = [
   {
     id: 5,
     title: "Hubungi Kami",
-    href: "https://wa.me/1234567890", // Tambahkan link WhatsApp atau lainnya
+    href: "https://wa.me/6282283272280", // Tambahkan link WhatsApp atau lainnya
   },
 ];
 
