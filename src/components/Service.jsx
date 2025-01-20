@@ -4,7 +4,11 @@ const Service = ({ serviceRef }) => {
       className="mx-auto my-16 px-5 lg:my-[120px] lg:w-[90%]"
       ref={serviceRef}
     >
-      <h1 className="mb-10 font-poppins-500 text-clamp-3">Layanan Kami</h1>
+      <h1 className="mb-4 font-poppins-500 text-clamp-3">Layanan Kami</h1>
+      <p className="mb-10 lg:text-lg">
+        Kami menyediakan berbagai layanan digital untuk membantu bisnis Anda
+        tumbuh
+      </p>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-0">
         <div className="flex h-full items-center justify-center rounded-br-full bg-[#F27121] p-5 lg:py-10">
           <img
@@ -15,31 +19,33 @@ const Service = ({ serviceRef }) => {
         </div>
         <div className="flex flex-col justify-center rounded border border-black p-5 sm:border-0 lg:p-10">
           <h1 className="font-bold lg:text-2xl">
-            Pembuatan Website untuk UMKM & Koperasi
+            Pembuatan Website Modern dan Responsif
           </h1>
           <h3 className="mb-4 font-semibold text-[#F27121] lg:text-xl">
-            Tingkatkan Bisnis Anda dengan Website Profesional
+            Website yang Sesuai dengan Identitas Bisnis Anda
           </h3>
           <p className="lg:text-xl">
-            Kami menyediakan layanan pembuatan website modern yang dirancang
-            khusus untuk UMKM dan koperasi. Website Anda akan tampil menarik
-            dengan desain responsif, fitur lengkap, dan optimasi SEO, membantu
-            menjangkau lebih banyak pelanggan.
+            Kami menyediakan layanan pembuatan website modern dan responsif yang
+            dirancang dengan teknologi terbaru. Website kami disesuaikan dengan
+            identitas bisnis Anda, tampil profesional, intuitif, dan kompatibel
+            di berbagai perangkat untuk membantu meningkatkan kehadiran online
+            dan menjangkau lebih banyak pelanggan.
           </p>
         </div>
 
         <div className="flex flex-col justify-center rounded border border-black p-5 sm:border-0 lg:p-10">
           <h1 className="font-bold lg:text-2xl">
-            Pengembangan Aplikasi Custom untuk UMKM
+            Tingkatkan Visibilitas Bisnis Anda di Google
           </h1>
           <h3 className="mb-4 font-semibold text-[#F27121] lg:text-xl">
-            Solusi Digital untuk Mendukung Bisnis Anda
+            Optimasi Website untuk Pencarian Lebih Efektif
           </h3>
           <p className="font-normal lg:text-xl">
-            Kami menawarkan pengembangan aplikasi custom yang disesuaikan dengan
-            kebutuhan bisnis Anda. Mulai dari manajemen keuangan hingga platform
-            e-commerce, aplikasi kami dirancang untuk meningkatkan efisiensi
-            operasional UMKM dan koperasi Anda.
+            Kami membantu bisnis Anda muncul lebih mudah di Google dengan teknik
+            optimasi SEO yang tepat. Dengan strategi yang efektif, website Anda
+            akan lebih sering tampil di hasil pencarian, meningkatkan
+            visibilitas, menarik lebih banyak pengunjung, dan membantu
+            pertumbuhan bisnis secara online.
           </p>
         </div>
         <div className="flex h-full items-center justify-center rounded-tl-full bg-[#F27121] p-5 lg:py-10">
