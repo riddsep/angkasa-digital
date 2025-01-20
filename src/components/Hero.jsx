@@ -31,8 +31,8 @@ const Hero = ({ scrollToSection, berandaRef }) => {
         <picture>
           <source srcSet="/hero-medium.png" media="(min-width: 640px)" />
           <img
-            src="/hero-small.svg"
-            className="w-full"
+            src="/hero-small.png"
+            className="min-h-[320px] w-full rounded-xl object-cover"
             width={400}
             height={400}
             loading="lazy"
