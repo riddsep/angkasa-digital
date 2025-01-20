@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
-import { MyFormcarryFormURL } from "../Config";
 import { toast } from "react-toastify";
+import { MyFormcarryFormURL } from "./config";
 
 function Konsultasi({ contactRef }) {
   const [formData, setFormData] = useState({
