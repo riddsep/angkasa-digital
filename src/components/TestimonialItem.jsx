@@ -3,48 +3,39 @@ import { useCallback } from "react";
 const testimonials = [
   {
     id: 1,
-    name: "Randy Wijaya",
+    name: "Selvi",
     position: "CEO",
-    company: "Digital Innovate",
+    company: "Careyourself.id",
     testimonial:
-      "Kami sangat puas dengan layanan yang diberikan. Website perusahaan kami terlihat modern, profesional, dan performanya sangat baik. Tim ini sangat responsif terhadap kebutuhan kami.",
-    image: "https://randomuser.me/api/portraits/men/45.jpg", // URL gambar asli
+      "Website ini sangat menarik dan berkualitas. Terima kasih Angkasa Digital atas layanan pembuatan website yang profesional dan sesuai harapan kami.",
+    image: "https://randomuser.me/api/portraits/women/68.jpg", // URL gambar asli
   },
   {
     id: 2,
-    name: "Ayu Lestari",
-    position: "Marketing Manager",
-    company: "Toko Sukses Abadi",
+    name: "Yuni",
+    position: "Business Unit Manager",
+    company: "Halo Tentor",
     testimonial:
-      "Tim ini berhasil membuat website toko online kami dengan sangat cepat dan sesuai ekspektasi. Penjualan kami meningkat pesat berkat fitur e-commerce yang user-friendly.",
+      "Angkasa Digital sangat memuaskan. Kami sekarang memiliki website yang benar-benar mencerminkan bisnis kami.",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
   },
   {
     id: 3,
-    name: "Dimas Pratama",
+    name: "Satria",
     position: "Owner",
-    company: "Dimas Photography",
+    company: "Indosatria Teknologi Utama",
     testimonial:
-      "Saya sangat terkesan dengan desain portofolio yang elegan dan menarik. Klien saya sekarang dapat melihat karya saya dengan lebih mudah, berkat website ini.",
+      "Website ini keren dan sangat oke. Terima kasih Angkasa Digital atas hasil yang luar biasa dan profesional dalam pembuatan website kami!.",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     id: 4,
     name: "Sari Oktaviani",
     position: "CFO",
-    company: "Startup Digital",
+    company: "Halo Legal",
     testimonial:
       "Proses pembuatan website berjalan lancar dan cepat. Website yang dihasilkan sangat mencerminkan identitas startup kami. Sangat merekomendasikan layanan ini!",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-  },
-  {
-    id: 5,
-    name: "Hendra Saputra",
-    position: "Product Manager",
-    company: "Tech Solutions",
-    testimonial:
-      "Website yang dibuat sangat responsif, performanya luar biasa, dan mendukung skala bisnis kami. Terima kasih untuk solusi terbaik yang diberikan.",
-    image: "https://randomuser.me/api/portraits/men/54.jpg",
   },
 ];
 
