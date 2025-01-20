@@ -1,12 +1,14 @@
-import { useRef } from "react";
-import Accordion from "./components/Accordion";
+import { lazy, Suspense, useRef } from "react";
 import CardList from "./components/CardList";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Konsultasi from "./components/Konsultasi";
-import Portfolio from "./components/Portfolio";
-import Service from "./components/Service";
-import Testimonial from "./components/Testimonial";
+import Loader from "./components/Loader";
+
+const Accordion = lazy(() => import("./components/Accordion"));
+const Footer = lazy(() => import("./components/Footer"));
+const Hero = lazy(() => import("./components/Hero"));
+const Konsultasi = lazy(() => import("./components/Konsultasi"));
+const Portfolio = lazy(() => import("./components/Portfolio"));
+const Service = lazy(() => import("./components/Service"));
+const Testimonial = lazy(() => import("./components/Testimonial"));
 
 function App() {
   const berandaRef = useRef(null);
@@ -43,7 +45,7 @@ function App() {
     }
   };
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <Hero scrollToSection={scrollToSection} berandaRef={berandaRef} />
       <CardList featuresRef={featuresRef} />
       <Service serviceRef={serviceRef} />
@@ -52,7 +54,7 @@ function App() {
       <Konsultasi contactRef={contactRef} />
       <Accordion faqRef={faqRef} />
       <Footer />
-    </>
+    </Suspense>
   );
 }
 
