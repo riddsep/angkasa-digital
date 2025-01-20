@@ -43,7 +43,7 @@ function Konsultasi({ contactRef }) {
           <div className="flex flex-col gap-5">
             <div className="flex w-80 items-center gap-2 rounded-xl bg-[#eeeeee] px-5 py-2 text-[#F27121]">
               <img src="/mail.svg" alt="" />
-              abcdefg@gmail.com
+              pt.ictnusantara@gmail.com
             </div>
             <div className="flex w-80 items-center gap-2 rounded-xl bg-[#eeeeee] px-5 py-2 text-[#F27121]">
               <img src="/instagram.svg" alt="" /> @angkasadigital
