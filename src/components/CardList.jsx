@@ -1,27 +1,27 @@
 const features = [
   {
     id: 1,
-    title: "Website Responsif",
-    desc: "Kami menciptakan desain yang terlihat sempurna di perangkat apa pun, dari desktop hingga smartphone.",
+    title: "Solusi Lengkap",
+    desc: "Mulai dari pembuatan website, manajemen media sosial, hingga strategi pemasaran—semua ada di sini.",
 
     icon: "/Responsif.svg",
   },
   {
     id: 2,
-    title: "Harga Terjangkau",
-    desc: "Layanan berkualitas dengan harga yang bersahabat untuk UMKM.",
+    title: "Fokus pada Kebutuhan Anda",
+    desc: "Setiap solusi dirancang khusus untuk memenuhi target bisnis Anda.",
     icon: "/Price.svg",
   },
   {
     id: 3,
-    title: "Sesuai Karakter",
-    desc: "Website Anda, sesuai dengan kebutuhan dan karakter bisnis Anda.",
+    title: "Berpengalaman dan Terpercaya",
+    desc: "Dengan lebih dari 10 tahun pengalaman, kami selalu memberikan yang terbaik.",
     icon: "/Hand.svg",
   },
   {
     id: 4,
-    title: "Jaminan After Sales",
-    desc: "Kami memberikan layanan support setelah peluncuran untuk memastikan website Anda selalu berjalan lancar.",
+    title: "Selalu Inovatif",
+    desc: "Kami terus mengikuti tren teknologi dan pemasaran terbaru untuk memberikan hasil terbaik.",
     icon: "/Support.svg",
   },
 ];
@@ -29,10 +29,17 @@ const features = [
 const CardList = ({ featuresRef }) => {
   return (
     <section
-      className="mx-auto my-16 px-5 font-poppins-500 lg:my-[120px] lg:w-[90%]"
+      className="mx-auto my-16 px-5 lg:my-[120px] lg:w-[90%]"
       ref={featuresRef}
     >
-      <h1 className="mb-10 text-clamp-3">Kenapa harus memilih kami</h1>
+      <h1 className="mb-4 font-poppins-500 text-clamp-3">
+        Kenapa harus memilih kami
+      </h1>
+      <p className="mb-10 max-w-[800px] lg:text-lg">
+        Kami paham bahwa memilih partner digital adalah langkah penting untuk
+        perkembangan bisnis Anda. Inilah alasan mengapa Angkasa Digital adalah
+        pilihan yang tepat.
+      </p>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature) => (
           <div

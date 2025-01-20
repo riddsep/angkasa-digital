@@ -9,6 +9,7 @@ const Button = ({ children, onClick, variant, width, href }) => {
       <a
         href={href}
         className={`rounded-2xl px-4 py-2 text-xs transition-all sm:text-base ${styles[variant]} ${width}`}
+        target={"_blank"}
       >
         {children}
       </a>
