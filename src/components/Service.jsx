@@ -8,7 +8,7 @@ const Service = ({ serviceRef }) => {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-0">
         <div className="flex h-full items-center justify-center rounded-br-full bg-[#F27121] px-5 lg:py-10">
           <img
-            src="/service-1.svg"
+            src="/service-1.png"
             className="h-80 lg:h-96"
             alt="Ilustrasi layanan pembuatan website"
           />
@@ -44,7 +44,7 @@ const Service = ({ serviceRef }) => {
         </div>
         <div className="flex h-full items-center justify-center rounded-tl-full bg-[#F27121] px-5 py-5 lg:py-10">
           <img
-            src="/service-2.svg"
+            src="/service-2.png"
             className="h-80 lg:h-96"
             alt="Ilustrasi layanan pengembangan aplikasi"
           />
