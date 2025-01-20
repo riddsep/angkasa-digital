@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { MyFormcarryFormURL } from "./config";
 
 function Konsultasi({ contactRef }) {
@@ -38,8 +38,11 @@ function Konsultasi({ contactRef }) {
       .then((response) => response.json())
       .then((response) => {
         if (response.code === 200) {
-          toast.success("Message sent successfully!", {
-            id: loading,
+          toast.update(loading, {
+            render: "Message sent successfully!",
+            type: "success",
+            isLoading: false,
+            autoClose: 3000,
           });
           setFormData({
             nama: "",
@@ -49,23 +52,28 @@ function Konsultasi({ contactRef }) {
             estimasiBudget: "1",
             pesan: "",
           });
-          console.log("sukses");
         } else if (response.code === 422) {
-          // Field validation failed
-          toast.error(response.title, {
-            id: loading,
+          toast.update(loading, {
+            render: response.title,
+            type: "error",
+            isLoading: false,
+            autoClose: 3000,
           });
         } else {
-          // other error from formcarry
-          toast.error(response.title, {
-            id: loading,
+          toast.update(loading, {
+            render: response.title,
+            type: "error",
+            isLoading: false,
+            autoClose: 3000,
           });
         }
       })
       .catch((error) => {
-        // request related error.
-        toast.error(error.message ? error.message : error, {
-          id: loading,
+        toast.update(loading, {
+          render: error.message ? error.message : error,
+          type: "error",
+          isLoading: false,
+          autoClose: 3000,
         });
       });
   }
@@ -202,6 +210,7 @@ function Konsultasi({ contactRef }) {
               Kirim Pesan
             </Button>
           </form>
+          <ToastContainer />
         </div>
       </div>
     </div>
