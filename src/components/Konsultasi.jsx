@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
+import { MyFormcarryFormURL } from "../Config";
+import { toast } from "react-toastify";
 
 function Konsultasi({ contactRef }) {
   const [formData, setFormData] = useState({
@@ -20,8 +22,52 @@ function Konsultasi({ contactRef }) {
     e.target.setCustomValidity("");
   }
 
-  function handleAddUserData(e) {
+  function handleSubmit(e) {
     e.preventDefault();
+
+    const loading = toast.loading("Sending message...");
+
+    fetch(MyFormcarryFormURL, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        if (response.code === 200) {
+          toast.success("Message sent successfully!", {
+            id: loading,
+          });
+          setFormData({
+            nama: "",
+            email: "",
+            notel: "",
+            lokasi: "",
+            estimasiBudget: "1",
+            pesan: "",
+          });
+          console.log("sukses");
+        } else if (response.code === 422) {
+          // Field validation failed
+          toast.error(response.title, {
+            id: loading,
+          });
+        } else {
+          // other error from formcarry
+          toast.error(response.title, {
+            id: loading,
+          });
+        }
+      })
+      .catch((error) => {
+        // request related error.
+        toast.error(error.message ? error.message : error, {
+          id: loading,
+        });
+      });
   }
 
   return (
@@ -54,7 +100,7 @@ function Konsultasi({ contactRef }) {
           </div>
         </div>
         <div>
-          <form onSubmit={handleAddUserData}>
+          <form onSubmit={handleSubmit}>
             <label htmlFor="nama">Nama</label>
             <input
               id="nama"
