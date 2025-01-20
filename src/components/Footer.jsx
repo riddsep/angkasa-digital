@@ -11,7 +11,7 @@ function Footer() {
           <img src="instagram.svg" alt="" className="w-7 cursor-pointer" />
           <img src="map-pin.svg" alt="" className="w-7 cursor-pointer" />
           <a
-            href="mailto:abcdefg@gmail.com?subject=Halo Angkasa Digital&body=Saya tertarik untuk berkonsultasi."
+            href="mailto:pt.ictnusantara@gmail.com?subject=Halo Angkasa Digital&body=Saya tertarik untuk berkonsultasi."
             className="hover:underline"
           >
             <img src="mail.svg" alt="" className="w-7 cursor-pointer" />
