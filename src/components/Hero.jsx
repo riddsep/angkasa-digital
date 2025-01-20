@@ -35,6 +35,7 @@ const Hero = ({ scrollToSection, berandaRef }) => {
             className="w-full"
             width={400}
             height={400}
+            loading="lazy"
           />
         </picture>
         <div className="absolute left-0 right-0 top-0 mx-auto w-[80%] translate-y-1/2">

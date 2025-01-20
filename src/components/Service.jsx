@@ -6,10 +6,10 @@ const Service = ({ serviceRef }) => {
     >
       <h1 className="mb-10 font-poppins-500 text-clamp-3">Layanan Kami</h1>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-0">
-        <div className="flex h-full items-center justify-center rounded-br-full bg-[#F27121] px-5 lg:py-10">
+        <div className="flex h-full items-center justify-center rounded-br-full bg-[#F27121] p-5 lg:py-10">
           <img
-            src="/service-1.svg"
-            className="h-80 lg:h-96"
+            src="/service-1.png"
+            className="h-[250px] w-auto max-w-full object-contain lg:h-[350px]"
             alt="Ilustrasi layanan pembuatan website"
           />
         </div>
@@ -42,10 +42,10 @@ const Service = ({ serviceRef }) => {
             operasional UMKM dan koperasi Anda.
           </p>
         </div>
-        <div className="flex h-full items-center justify-center rounded-tl-full bg-[#F27121] px-5 py-5 lg:py-10">
+        <div className="flex h-full items-center justify-center rounded-tl-full bg-[#F27121] p-5 lg:py-10">
           <img
-            src="/service-2.svg"
-            className="h-80 lg:h-96"
+            src="/service-2.png"
+            className="h-[250px] w-auto max-w-full object-contain lg:h-[350px]"
             alt="Ilustrasi layanan pengembangan aplikasi"
           />
         </div>

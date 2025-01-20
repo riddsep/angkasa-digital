@@ -16,7 +16,7 @@ const Portfolio = ({ portfolioRef }) => {
         </p>
       </div>
       <div>
-        <img src="/portfolio.svg" className="w-full" />
+        <img src="/portofolio.png" className="w-full" />
       </div>
     </section>
   );
