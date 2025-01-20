@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const Portfolio = ({ portfolioRef }) => {
   return (
     <section
@@ -9,11 +11,18 @@ const Portfolio = ({ portfolioRef }) => {
         <h3 className="mb-2 font-poppins-600 text-[#F27121] lg:text-xl">
           Website Halo Legal
         </h3>
-        <p className="lg:text-xl">
+        <p className="mb-4 lg:text-xl">
           Kami telah membantu Halo Legal membuat website profesional untuk
           menampilkan layanan legalitas dan perizinan terpercaya, memperkuat
           branding, dan mempermudah komunikasi dengan para pelaku usaha.
         </p>
+        <Button
+          variant={"primary"}
+          width={"w-fit"}
+          href={"https://ridoseptiawan.vercel.app"}
+        >
+          Lihat detail project
+        </Button>
       </div>
       <div>
         <img src="/portofolio.png" className="w-full" />
